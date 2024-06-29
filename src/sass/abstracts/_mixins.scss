@@ -1,0 +1,78 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+// @use "./sizes" as *;
+@use "./breakpoints" as *;
+
+// =============================
+//        Font Face Mixins
+// =============================
+
+@mixin custom-font-face($font-name, $file-name, $weight: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    font-style: normal;
+    font-display: swap;
+    font-weight: $weight;
+    src: url($file-name + ".eot");
+    src: local($font-name), url($file-name + ".woff2") format("woff2"),
+      url($file-name + ".woff") format("woff"),
+      url($file-name + ".ttf") format("truetype"),
+      url($file-name + ".eot?#iefix") format("embedded-opentype");
+  }
+}
+
+// ================================
+//      Media Queries Mixins
+// ================================
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media only screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+// =========================
+//      Customs Mixins
+// =========================
+
+@mixin x-grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin x-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin x-flex-flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin x-flex-column-flex-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@mixin x-flex-align {
+  display: flex;
+  align-items: center;
+}

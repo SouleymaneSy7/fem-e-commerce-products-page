@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "sizes" as *;
+
+// Pixel to rem function
+@function rem($px) {
+  $rems: math.div($px, 16px) * 1rem;
+  @return $rems;
+}
+
+// Size function
+@function size($size) {
+  @if map.has-key($sizes, $size) {
+    @return map.get($sizes, $size);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
+}

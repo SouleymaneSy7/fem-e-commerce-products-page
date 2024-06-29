@@ -1,0 +1,4 @@
+@use "../abstracts/" as *;
+
+// default @font-face
+@include custom-font-face("example-fonts", "@/assets/fonts/example-fonts", 400);
