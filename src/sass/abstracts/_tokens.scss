@@ -1,0 +1,57 @@
+@use "./typography" as *;
+@use "./colors" as *;
+@use "./sizes" as *;
+@use "./functions" as *;
+
+// ==========================
+//     Contextual Content
+// ==========================
+// Colors
+$color-text-default: $color-black;
+$color-background-default: $color-white;
+$color-text-link-default: $color-dark-grayish-blue;
+$color-text-link-hover: $color-dark-blue;
+$color-text-btn-default: $color-orange;
+$color-text-btn-hover: $color-pale-orange;
+
+// Line-height
+$line-height-default: 1.5;
+$line-height-heading: 1.2;
+
+// Gap
+$grid-gap: size(4);
+
+// Padding
+$section-padding-block: size(5);
+
+// Border Radius
+$full-radius: 100vmax;
+$border-radius-1: $size-1;
+$border-radius-2: $size-2;
+$border-radius-3: $size-3;
+$border-radius-4: $size-4;
+$border-radius-full: $full-radius;
+
+// Box Shadow
+
+
+// ==========================
+//         Container
+// ==========================
+$container-min-margin-inline: size(4);
+$container-max-width: rem(1024px);
+
+// ==================
+//        Body
+// ==================
+
+$body-font-family: $font-family-base;
+$body-font-size: rem(16px);
+$body-line-height: $line-height-default;
+$body-font-weight: $font-weight-default;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+// Anchor link
+$link-color: $color-text-link-default;
+$link-color-hover: $color-text-link-hover;

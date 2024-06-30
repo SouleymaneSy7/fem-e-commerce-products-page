@@ -2,6 +2,6 @@
 
 :root {
   @each $colors, $value in $colors {
-    --#{$colors}-clr: #{$value};
+    --clr-#{$colors}: #{$value};
   }
 }
