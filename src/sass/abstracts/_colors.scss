@@ -1,0 +1,21 @@
+$color-pale-orange: hsl(25, 100%, 94%);
+$color-orange: hsl(26, 100%, 55%);
+$color-white: hsl(0, 0%, 100%);
+$color-light-grayish-blue: hsl(223, 64%, 98%);
+$color-grayish-blue: hsl(220, 14%, 75%);
+$color-dark-grayish-blue: hsl(219, 9%, 45%);
+$color-dark-blue: hsl(220, 13%, 13%);
+$color-lightbox-bg: hsla(0, 0%, 0%, 0.75);
+$color-black: hsl(0, 0%, 0%);
+
+$colors: (
+  orange-100: $color-pale-orange,
+  orange-200: $color-orange,
+  dark-100: $color-lightbox-bg,
+  dark-200: $color-dark-blue,
+  dark-300: $color-black,
+  light-100: $color-white,
+  light-200: $color-light-grayish-blue,
+  light-300: $color-grayish-blue,
+  light-400: $color-dark-grayish-blue,
+);
