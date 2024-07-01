@@ -1,19 +1,21 @@
+import React from "react";
+
 type NavListPropsTypes = {
   list: {
     id: number;
-    title: string;
+    linkTitle: string;
   }[];
 };
 
 const NavList = ({ list }: NavListPropsTypes) => {
   return (
-    <li>
-      {list.map(({ id, title }) => (
-        <a href="#" key={id}>
-          {title}
-        </a>
+    <React.Fragment>
+      {list.map(({ id, linkTitle }) => (
+        <li key={id}>
+          <a href="#">{linkTitle}</a>
+        </li>
       ))}
-    </li>
+    </React.Fragment>
   );
 };
 
