@@ -10,6 +10,10 @@ import {
   product_thumbnail_4,
 } from "@/utils";
 
+export const buttonText: string = "Add to cart";
+export const cartButtonText: string = "Checkout";
+export const cartEmptyText: string = "Your cart is empty.";
+
 export const Images = [
   product_img_1,
   product_img_2,
@@ -61,8 +65,5 @@ export const cartContent = {
   cartImg: product_thumbnail_1,
   cartTitle: "Fall Limited Edition Sneakers",
   cartIcon: DeleteIcon,
+  buttonText: cartButtonText,
 };
-
-export const buttonText = "Add to cart";
-export const cartButtonText = "Checkout";
-export const cartEmptyText = "Your cart is empty.";
