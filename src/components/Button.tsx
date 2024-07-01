@@ -2,7 +2,7 @@ import { type ComponentPropsWithoutRef, type ReactNode } from "react";
 
 type ButtonPropsType = {
   children: ReactNode;
-  customClassName?: string;
+  customClassName?: string | null;
 } & ComponentPropsWithoutRef<"button">;
 
 const Button = ({ children, customClassName, ...props }: ButtonPropsType) => {
