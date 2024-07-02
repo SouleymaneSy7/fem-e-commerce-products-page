@@ -59,6 +59,7 @@ export const mainContent = {
   price: 125,
   reduction: "50%",
   fullPrice: 250,
+  mainButtonText: buttonText,
 };
 
 export const cartContent = {
@@ -66,5 +67,5 @@ export const cartContent = {
   cartTitle: "Fall Limited Edition Sneakers",
   cartPrice: 125,
   cartIcon: DeleteIcon,
-  buttonText: cartButtonText,
+  cartButtonText: cartButtonText,
 };
