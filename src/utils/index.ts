@@ -10,6 +10,7 @@ import product_img_1 from "@/assets/images/image-product-1.jpg";
 import product_img_2 from "@/assets/images/image-product-2.jpg";
 import product_img_3 from "@/assets/images/image-product-3.jpg";
 import product_img_4 from "@/assets/images/image-product-4.jpg";
+import { Cart } from "../components/icons/Icons.component";
 
 import {
   Logo,
@@ -35,6 +36,7 @@ export {
 
 export {
   Logo as LogoIcon,
+  Cart as CartIcon,
   Close as CloseIcon,
   Delete as DeleteIcon,
   Minus as MinusIcon,
