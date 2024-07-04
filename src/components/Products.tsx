@@ -36,7 +36,7 @@ const Products = () => {
 
       <div className="product__counter">
         <Button
-          customClassName={"product__counter--minus"}
+          className="product__counter--minus"
           onClick={decreaseProductCounter}
         >
           <MinusIcon />
@@ -45,14 +45,14 @@ const Products = () => {
         <p className="product__counter--count">{productCounter}</p>
 
         <Button
-          customClassName={"product__counter--plus"}
+          className="product__counter--plus"
           onClick={increaseProductCounter}
         >
           <PlusIcon />
         </Button>
       </div>
 
-      <Button customClassName={"product--btn"}>
+      <Button className="product--btn">
         <CartIcon />
         {mainButtonText}
       </Button>

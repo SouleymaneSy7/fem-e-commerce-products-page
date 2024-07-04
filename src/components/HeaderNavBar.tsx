@@ -20,7 +20,7 @@ const HeaderNavBar = () => {
     <nav className="navigation | container">
       <div className="navigation__left">
         <div>
-          <Button customClassName={"navigation--hamburger-btn"}>
+          <Button className="navigation--hamburger-btn">
             <span className="hamburger-line__top"></span>
             <span className="hamburger-line__center"></span>
             <span className="hamburger-line__bottom"></span>
@@ -38,9 +38,9 @@ const HeaderNavBar = () => {
 
       <div className="navigation__right">
         <div className="navigation__right__cart">
-          <Button onClick={handleCartOpen}>
+          <Button className="navigation__cart--btn" onClick={handleCartOpen}>
             <CartIcon />
-            <div className="cart--counter"> {productCounter} </div>
+            <div className="navigation__cart--counter"> {productCounter} </div>
           </Button>
 
           <Cart
@@ -50,7 +50,7 @@ const HeaderNavBar = () => {
           />
         </div>
 
-        <Button>
+        <Button className="navigation__right__avatar">
           <img src={avatarImg} />
         </Button>
       </div>

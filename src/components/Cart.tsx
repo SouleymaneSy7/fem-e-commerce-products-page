@@ -50,10 +50,7 @@ const Cart = ({ isOpen, cartItemContent, cartEmpty }: CartPropsType) => {
                 </p>
               </div>
 
-              <Button
-                customClassName={"cart--icon"}
-                onClick={resetProductCounter}
-              >
+              <Button className="cart--icon" onClick={resetProductCounter}>
                 <CartDeleteIcon />
               </Button>
             </div>
