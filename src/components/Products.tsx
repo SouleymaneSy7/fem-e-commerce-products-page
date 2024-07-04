@@ -2,8 +2,7 @@ import Button from "./Button";
 import { mainContent } from "@/constants";
 import { formatNumber } from "@/utils/currencyFormat";
 import { CartIcon, MinusIcon, PlusIcon } from "@/utils";
-
-const productCounter = 14;
+import { useProductCounter } from "@/contexts/ProductContext";
 
 const Products = () => {
   const {
@@ -15,6 +14,9 @@ const Products = () => {
     fullPrice,
     mainButtonText,
   } = mainContent;
+
+  const { productCounter, increaseProductCounter, decreaseProductCounter } =
+    useProductCounter();
 
   return (
     <section className="products">
@@ -33,13 +35,19 @@ const Products = () => {
       </div>
 
       <div className="product__counter">
-        <Button customClassName={"product__counter--minus"}>
+        <Button
+          customClassName={"product__counter--minus"}
+          onClick={decreaseProductCounter}
+        >
           <MinusIcon />
         </Button>
 
         <p className="product__counter--count">{productCounter}</p>
 
-        <Button customClassName={"product__counter--plus"}>
+        <Button
+          customClassName={"product__counter--plus"}
+          onClick={increaseProductCounter}
+        >
           <PlusIcon />
         </Button>
       </div>
