@@ -63,9 +63,10 @@ export const mainContent = {
 };
 
 export const cartContent = {
+  cartTitle: "Cart",
   cartImg: product_thumbnail_1,
-  cartTitle: "Fall Limited Edition Sneakers",
+  cartContentTitle: "Fall Limited Edition Sneakers",
   cartPrice: 125,
-  cartIcon: DeleteIcon,
+  CartDeleteIcon: DeleteIcon,
   cartButtonText: cartButtonText,
 };
