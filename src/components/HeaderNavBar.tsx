@@ -1,10 +1,21 @@
+import React from "react";
+
 import NavList from "./NavList";
 import Button from "./Button";
-import { Cart } from "./icons/Icons.component";
-import { navigationList } from "@/constants";
-import { LogoIcon, avatarImg } from "@/utils";
+import Cart from "./Cart";
+import { cartContent, cartEmptyText, navigationList } from "@/constants";
+import { CartIcon, LogoIcon, avatarImg } from "@/utils";
+import { useProductCounter } from "@/contexts/ProductContext";
 
 const HeaderNavBar = () => {
+  const [isCartOpen, setIsCartOpen] = React.useState(false);
+
+  const { productCounter } = useProductCounter();
+
+  const handleCartOpen = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <nav className="navigation | container">
       <div className="navigation__left">
@@ -26,10 +37,18 @@ const HeaderNavBar = () => {
       </div>
 
       <div className="navigation__right">
-        <Button>
-          <Cart />
-          <div className="cart--counter">12</div>
-        </Button>
+        <div className="navigation__right__cart">
+          <Button onClick={handleCartOpen}>
+            <CartIcon />
+            <div className="cart--counter"> {productCounter} </div>
+          </Button>
+
+          <Cart
+            isOpen={isCartOpen}
+            cartItemContent={cartContent}
+            cartEmpty={cartEmptyText}
+          />
+        </div>
 
         <Button>
           <img src={avatarImg} />
