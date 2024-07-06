@@ -8,7 +8,7 @@ import { CloseIcon, NextIcon, PreviousIcon } from "@/utils";
 const LightBoxContainer = ({ productImages }) => {
   const [selectedImage, setSelectedImage] = React.useState(0);
   const [lightBoxIsOpen, setLightBoxIsOpen] = React.useState(false);
-  const [imageToShow, setImageToShow] = React.useState("");
+  const [imageToShow, setImageToShow] = React.useState();
 
   let currentImage = productImages.indexOf(imageToShow);
 
