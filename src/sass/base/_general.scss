@@ -9,10 +9,19 @@ body {
   line-height: $body-line-height;
 }
 
-a {
+.navigation__list li a {
   color: $link-color;
 }
 
-a:is(:hover, :focus-visible) {
+.navigation__list li a:is(:hover, :focus-visible) {
   color: $link-color-hover;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+
+  cursor: pointer;
 }
