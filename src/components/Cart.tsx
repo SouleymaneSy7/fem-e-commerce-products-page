@@ -58,7 +58,7 @@ const Cart = ({ isOpen, cartItemContent, cartEmpty }: CartPropsType) => {
             <Button className="cart--btn">{cartButtonText}</Button>
           </section>
         ) : (
-          cartEmpty
+          <p className="cart__empty">{cartEmpty}</p>
         )}
       </main>
     </article>
