@@ -62,7 +62,6 @@ const LightBoxContainer = ({ productImages }) => {
 
         <div
           className="lightbox__img-indicators"
-          style={{ display: "flex", gap: "1rem" }}
         >
           {productImages.map((imageSrc, index) => {
             const isSelected = selectedImage === index;
@@ -70,7 +69,6 @@ const LightBoxContainer = ({ productImages }) => {
             return (
               <Button
                 key={index}
-                style={{ width: 125, height: 125 }}
                 onClick={() => setSelectedImage(index)}
               >
                 <img
@@ -101,7 +99,7 @@ const LightBoxContainer = ({ productImages }) => {
           </Button>
 
           <div className="lightbox-modal">
-            <img style={{ width: 200 }} src={imageToShow} alt="Sneaker Image" />
+            <img src={imageToShow} alt="Sneaker Image" />
 
             <div className="mobile-carousel__btn-container">
               <Button className="mobile-carousel--btn" onClick={prevImg}>
@@ -116,7 +114,6 @@ const LightBoxContainer = ({ productImages }) => {
 
           <div
             className="lightbox-modal--indicators"
-            style={{ display: "flex", gap: "1rem" }}
           >
             {productImages.map((imgSrc, index) => {
               const isSelected = currentImage === index;
