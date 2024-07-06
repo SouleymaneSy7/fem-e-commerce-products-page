@@ -1,0 +1,100 @@
+@use "../abstracts/" as *;
+
+.products {
+  padding-block: size(7);
+
+  & .product__sub-title {
+    font-size: rem(12px);
+    font-weight: $font-weight-bold;
+    color: var(--clr-orange-200);
+    text-transform: uppercase;
+    letter-spacing: rem(2px);
+
+    margin-block-end: rem(16px);
+  }
+
+  & .product__title {
+    font-size: rem(29px);
+    margin-block-end: rem(16px);
+  }
+
+  & .product__description {
+    color: var(--clr-light-400);
+    margin-block-end: rem(20px);
+  }
+
+  & .product__price div {
+    display: flex;
+    align-items: center;
+    gap: size(4);
+
+    & .product__price--reduct {
+      font-size: rem(25px);
+    }
+
+    & .product__price--percent {
+      background-color: var(--clr-orange-100);
+      border-radius: rem(6px);
+      padding: rem(2px) rem(8px);
+
+      & span {
+        font-weight: $font-weight-bold;
+        color: var(--clr-orange-200);
+      }
+    }
+  }
+
+  & .product__price--full {
+    font-size: rem(17px);
+    font-weight: $font-weight-bold;
+    color: var(--clr-light-300);
+    text-decoration: line-through;
+
+    margin-block-end: rem(24px);
+  }
+
+  & .product__price,
+  & .product__counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  & .product__counter {
+    background-color: var(--clr-light-200);
+    border-radius: rem(10px);
+
+    padding: rem(18px) rem(16px);
+
+    margin-block-end: rem(16px);
+
+    &--count {
+      font-weight: $font-weight-bold;
+      color: var(--clr-dark-300);
+    }
+  }
+
+  & .product--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: size(4);
+
+    width: 100%;
+
+    font-size: rem(16px);
+    font-weight: $font-weight-bold;
+    color: var(--clr-light-100);
+
+    background-color: var(--clr-orange-200);
+    border-radius: rem(10px);
+
+    padding: rem(18px) rem(20px);
+
+    transition: background-color 200ms ease-in-out;
+
+    &:is(:hover, :focus-visible) {
+      background-color: var(--clr-orange-100);
+    }
+  }
+}

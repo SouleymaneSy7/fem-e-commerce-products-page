@@ -1,0 +1,141 @@
+@use "../abstracts/" as *;
+
+.navigation {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: size(4);
+
+  padding-block: rem(20px);
+
+  &.container {
+    --max-width: #{rem(650px)};
+  }
+
+  @include mq(large) {
+    border-bottom: rem(1px) solid var(--clr-light-300);
+  }
+}
+
+.navigation__left {
+  display: flex;
+  align-items: center;
+
+  & div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: size(4);
+  }
+
+  & .navigation__list {
+    display: none;
+  }
+}
+
+.navigation--hamburger-btn {
+  display: grid;
+  place-content: center;
+  gap: rem(4px);
+
+  & span {
+    display: inline-block;
+
+    width: rem(30px);
+    height: rem(5px);
+
+    background-color: var(--clr-dark-200);
+    border-radius: $full-radius;
+  }
+}
+
+.navigation__right {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: size(2);
+
+  // &__cart {
+  //   position: relative;
+  // }
+
+  .navigation__cart--btn {
+    color: var(--clr-light-400);
+
+    padding: rem(5px);
+    transition: color 150ms ease-in-out;
+
+    &:is(:hover, :focus-visible) {
+      color: var(--clr-dark-300);
+    }
+
+    & .navigation__cart--counter {
+      position: absolute;
+      left: rem(14px);
+      top: 0;
+
+      display: grid;
+      place-items: center;
+
+      width: fit-content;
+
+      font-size: rem(8px);
+      font-weight: $font-weight-bold;
+      color: var(--clr-light-100);
+
+      background-color: var(--clr-orange-200);
+      border-radius: $full-radius;
+
+      padding: rem(2px) rem(7px);
+    }
+  }
+
+  &__avatar {
+    --avatar-size: #{rem(55px)};
+    --avatar-border-color: transparent;
+
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+
+    border-radius: $border-radius-full;
+    border: 2px solid var(--avatar-border-color);
+
+    transition: border 250ms ease-in-out;
+
+    &:is(:hover, :focus-visible) {
+      --avatar-border-color: var(--clr-orange-200);
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      border-radius: $border-radius-full;
+
+      object-fit: contain;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
+@include mq(large) {
+  .navigation.container {
+    --max-width: #{$container-max-width};
+  }
+
+  .navigation__left {
+    gap: size(10);
+
+    & .navigation--hamburger-btn {
+      display: none;
+    }
+
+    & .navigation__list {
+      display: flex;
+      align-items: center;
+      gap: size(6);
+    }
+  }
+}
