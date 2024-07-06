@@ -42,18 +42,18 @@ const HeaderNavBar = () => {
             <CartIcon />
             <div className="navigation__cart--counter"> {productCounter} </div>
           </Button>
-
-          <Cart
-            isOpen={isCartOpen}
-            cartItemContent={cartContent}
-            cartEmpty={cartEmptyText}
-          />
         </div>
 
         <Button className="navigation__right__avatar">
           <img src={avatarImg} />
         </Button>
       </div>
+
+      <Cart
+        isOpen={isCartOpen}
+        cartItemContent={cartContent}
+        cartEmpty={cartEmptyText}
+      />
     </nav>
   );
 };
