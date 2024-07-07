@@ -49,7 +49,7 @@ const LightBoxContainer = ({ productImages }) => {
 
   return (
     <React.Fragment>
-      <section className="lightbox container">
+      <section className="lightbox">
         <Button
           className="lightbox__main-img"
           onClick={() => showLightBox(productImages[selectedImage])}
@@ -60,23 +60,18 @@ const LightBoxContainer = ({ productImages }) => {
           />
         </Button>
 
-        <div
-          className="lightbox__img-indicators"
-        >
+        <div className="lightbox__img-indicators">
           {productImages.map((imageSrc, index) => {
             const isSelected = selectedImage === index;
 
             return (
-              <Button
-                key={index}
-                onClick={() => setSelectedImage(index)}
-              >
+              <Button key={index} onClick={() => setSelectedImage(index)}>
                 <img
                   src={imageSrc}
                   alt="Small sneaker image"
                   className="lightbox__img-indicators__selected-imgs"
                   style={{
-                    opacity: isSelected ? 0.5 : 1,
+                    opacity: isSelected ? 0.3 : 1,
                   }}
                 />
 
@@ -93,51 +88,51 @@ const LightBoxContainer = ({ productImages }) => {
       </section>
 
       {lightBoxIsOpen ? (
-        <section className="lightbox-modal">
-          <Button className="lightbox-modal--close">
-            <CloseIcon onClick={closeLightBox} />
-          </Button>
+        <section className="lightbox-modal-container">
+          <div className="lightbox-flex">
+            <Button className="lightbox-modal--close">
+              <CloseIcon onClick={closeLightBox} />
+            </Button>
 
-          <div className="lightbox-modal">
-            <img src={imageToShow} alt="Sneaker Image" />
+            <div className="lightbox-modal">
+              <img src={imageToShow} alt="Sneaker Image" />
 
-            <div className="mobile-carousel__btn-container">
-              <Button className="mobile-carousel--btn" onClick={prevImg}>
-                <PreviousIcon />
-              </Button>
-
-              <Button className="mobile-carousel--btn" onClick={nextImg}>
-                <NextIcon />
-              </Button>
-            </div>
-          </div>
-
-          <div
-            className="lightbox-modal--indicators"
-          >
-            {productImages.map((imgSrc, index) => {
-              const isSelected = currentImage === index;
-
-              return (
-                <Button key={index} onClick={() => goToImage(index)}>
-                  <img
-                    src={imgSrc}
-                    alt="Small sneaker image"
-                    className="lightbox__img-indicators__selected-imgs"
-                    style={{
-                      opacity: isSelected ? 0.5 : 1,
-                    }}
-                  />
-
-                  <span
-                    className="lightbox--selected-ring-indicator"
-                    style={{
-                      opacity: isSelected ? 1 : 0,
-                    }}
-                  ></span>
+              <div className="lightbox-modal__btn-container">
+                <Button className="lightbox-modal--btn" onClick={prevImg}>
+                  <PreviousIcon />
                 </Button>
-              );
-            })}
+
+                <Button className="lightbox-modal--btn" onClick={nextImg}>
+                  <NextIcon />
+                </Button>
+              </div>
+            </div>
+
+            <div className="lightbox-modal--indicators">
+              {productImages.map((imgSrc, index) => {
+                const isSelected = currentImage === index;
+
+                return (
+                  <Button key={index} onClick={() => goToImage(index)}>
+                    <img
+                      src={imgSrc}
+                      alt="Small sneaker image"
+                      className="lightbox__img-indicators__selected-imgs"
+                      style={{
+                        opacity: isSelected ? 0.3 : 1,
+                      }}
+                    />
+
+                    <span
+                      className="lightbox--selected-ring-indicator"
+                      style={{
+                        opacity: isSelected ? 1 : 0,
+                      }}
+                    ></span>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </section>
       ) : (
