@@ -34,28 +34,30 @@ const Products = () => {
         <p className="product__price--full">{formatNumber(fullPrice)}</p>
       </div>
 
-      <div className="product__counter">
-        <Button
-          className="product__counter--minus"
-          onClick={decreaseProductCounter}
-        >
-          <MinusIcon />
-        </Button>
+      <div className="product__flex">
+        <div className="product__counter">
+          <Button
+            className="product__counter--minus"
+            onClick={decreaseProductCounter}
+          >
+            <MinusIcon />
+          </Button>
 
-        <p className="product__counter--count">{productCounter}</p>
+          <p className="product__counter--count">{productCounter}</p>
 
-        <Button
-          className="product__counter--plus"
-          onClick={increaseProductCounter}
-        >
-          <PlusIcon />
+          <Button
+            className="product__counter--plus"
+            onClick={increaseProductCounter}
+          >
+            <PlusIcon />
+          </Button>
+        </div>
+
+        <Button className="product--btn">
+          <CartIcon />
+          {mainButtonText}
         </Button>
       </div>
-
-      <Button className="product--btn">
-        <CartIcon />
-        {mainButtonText}
-      </Button>
     </section>
   );
 };
