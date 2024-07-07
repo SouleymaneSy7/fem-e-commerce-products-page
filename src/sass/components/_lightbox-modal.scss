@@ -1,0 +1,121 @@
+@use "../abstracts" as *;
+
+.lightbox-modal-container {
+  display: none;
+
+  @include mq(large) {
+    position: absolute;
+    inset: 0;
+    z-index: 100000;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    background-color: var(--clr-dark-100);
+
+    overflow: hidden;
+  }
+}
+
+.lightbox-flex {
+  width: min(100%, rem(500px));
+  position: relative;
+}
+
+.lightbox-modal {
+  position: relative;
+  margin-block-end: rem(30px);
+
+  & img {
+    border-radius: rem(12px);
+  }
+
+  &__btn-container {
+    position: absolute;
+    top: 50%;
+    left: rem(-28px);
+    transform: translateY(-50%);
+
+    width: 110%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .lightbox-modal--btn {
+      width: rem(50px);
+      height: rem(50px);
+
+      display: grid;
+      place-items: center;
+
+      border-radius: $full-radius;
+      background-color: var(--clr-light-100);
+
+      & svg path {
+        transition: stroke 200ms ease-in-out;
+      }
+
+      &:is(:hover, :focus-visible) svg path {
+        stroke: var(--clr-orange-200);
+      }
+
+      &:nth-child(1) svg {
+        margin-inline-end: rem(3.5px);
+      }
+
+      &:nth-child(2) svg {
+        margin-inline-start: rem(3.5px);
+      }
+    }
+  }
+}
+
+.lightbox-modal--close {
+  position: absolute;
+  top: rem(-60px);
+  right: rem(-20px);
+
+  padding: rem(20px);
+
+  &:hover svg path {
+    fill: var(--clr-orange-200);
+  }
+
+  & svg path {
+    fill: var(--clr-light-100);
+  }
+
+  margin-inline: auto;
+}
+
+.lightbox-modal--indicators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: size(4);
+
+  padding-inline: rem(30px);
+
+  & button {
+    position: relative;
+    width: rem(90px);
+
+    & img {
+      border-radius: rem(12px);
+    }
+
+    & .lightbox--selected-ring-indicator {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+
+      border-radius: rem(12px);
+      border: rem(2px) solid var(--clr-orange-200);
+    }
+  }
+}

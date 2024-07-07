@@ -41,6 +41,10 @@
 
     padding: rem(22px);
 
+    & section {
+      width: 100%;
+    }
+
     & .cart__empty {
       font-size: rem(15px);
       font-weight: $font-weight-bold;

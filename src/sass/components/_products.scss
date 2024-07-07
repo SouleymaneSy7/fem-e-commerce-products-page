@@ -89,12 +89,43 @@
     background-color: var(--clr-orange-200);
     border-radius: rem(10px);
 
-    padding: rem(18px) rem(20px);
+    padding: rem(18px) rem(16px);
 
     transition: background-color 200ms ease-in-out;
 
     &:is(:hover, :focus-visible) {
       background-color: var(--clr-orange-100);
+    }
+  }
+}
+
+@include mq(large) {
+  .products {
+    width: min(100%, rem(450px));
+
+    & .product__title {
+      font-size: rem(40px);
+    }
+
+    & .product__price {
+      flex-direction: column;
+      gap: size(1);
+    }
+
+    & .product__counter {
+      width: min(100%, rem(230px));
+      align-items: center;
+      margin: 0;
+    }
+
+    & .product__flex {
+      display: flex;
+      align-items: center;
+      gap: size(4);
+    }
+
+    & .product--btn {
+      padding: rem(19px) rem(16px);
     }
   }
 }
