@@ -10,10 +10,12 @@ import product_img_1 from "@/assets/images/image-product-1.jpg";
 import product_img_2 from "@/assets/images/image-product-2.jpg";
 import product_img_3 from "@/assets/images/image-product-3.jpg";
 import product_img_4 from "@/assets/images/image-product-4.jpg";
-import { Cart } from "../components/icons/Icons.component";
 
+// Icons
 import {
   Logo,
+  Cart,
+  HamburgerMenu,
   Close,
   Delete,
   Minus,
@@ -37,6 +39,7 @@ export {
 export {
   Logo as LogoIcon,
   Cart as CartIcon,
+  HamburgerMenu as HamburgerMenuIcon,
   Close as CloseIcon,
   Delete as DeleteIcon,
   Minus as MinusIcon,
