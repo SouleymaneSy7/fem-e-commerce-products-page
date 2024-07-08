@@ -11,29 +11,17 @@ $color-text-default: $color-black;
 $color-background-default: $color-white;
 $color-text-link-default: $color-dark-grayish-blue;
 $color-text-link-hover: $color-dark-blue;
-$color-text-btn-default: $color-orange;
-$color-text-btn-hover: $color-pale-orange;
 
 // Line-height
 $line-height-default: 1.5;
-$line-height-heading: 1.2;
-
-// Gap
-$grid-gap: size(4);
-
-// Padding
-$section-padding-block: size(5);
 
 // Border Radius
 $full-radius: 100vmax;
-$border-radius-1: $size-1;
-$border-radius-2: $size-2;
-$border-radius-3: $size-3;
-$border-radius-4: $size-4;
 $border-radius-full: $full-radius;
 
 // Box Shadow
-
+$product-btn-shadow-clr: hsla(26, 100%, 55%, 0.25);
+$cart-bg-shadow-clr: hsla(0, 3%, 28%, 0.3);
 
 // ==========================
 //         Container
