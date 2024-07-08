@@ -1,4 +1,15 @@
 @use "../abstracts/" as *;
 
 // default @font-face
-@include custom-font-face("example-fonts", "@/assets/fonts/example-fonts", 400);
+@include custom-font-face(
+  "Kumbh Sans",
+  "@/assets/fonts/kumbh-sans-regular",
+  400
+);
+
+// bold @font-face
+@include custom-font-face(
+  "Kumbh Sans",
+  "@/assets/fonts/kumbh-sans-bold",
+  700
+);
