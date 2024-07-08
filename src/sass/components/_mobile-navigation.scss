@@ -1,0 +1,48 @@
+@use "../abstracts/" as *;
+
+.mobile-navbar-container {
+  --mobile-navbar-full-size: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--mobile-navbar-full-size);
+  height: var(--mobile-navbar-full-size);
+
+  transform: translateX(-100%);
+
+  background-color: var(--clr-dark-100);
+
+  overflow: hidden;
+
+  &.active {
+    transform: translateX(0%);
+  }
+
+  @include mq(large) {
+    display: none;
+  }
+}
+
+.mobile-navbar {
+  width: min(70%, rem(300px));
+  height: 100%;
+
+  background-color: var(--clr-light-100);
+
+  padding: rem(40px) rem(24px);
+
+  & .mobile-navbar__navigation li {
+    margin-block-end: rem(15px);
+
+    & a {
+      font-weight: $font-weight-bold;
+
+      transition: color 150ms ease-in-out;
+
+      &:is(:hover, :focus-visible) {
+        color: var(--clr-orange-200);
+      }
+    }
+  }
+}

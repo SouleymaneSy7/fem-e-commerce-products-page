@@ -11,21 +11,32 @@
     letter-spacing: rem(2px);
 
     margin-block-end: rem(16px);
+
+    @include mq(large) {
+      margin-block-end: rem(18px);
+    }
   }
 
   & .product__title {
-    font-size: rem(29px);
+    font-size: rem(30px);
     margin-block-end: rem(16px);
+
+    @include mq(large) {
+      margin-block-end: rem(28px);
+    }
   }
 
   & .product__description {
     color: var(--clr-light-400);
     margin-block-end: rem(20px);
+
+    @include mq(large) {
+      margin-block-end: rem(26px);
+    }
   }
 
   & .product__price div {
-    display: flex;
-    align-items: center;
+    @include x-flex-align;
     gap: size(4);
 
     & .product__price--reduct {
@@ -35,9 +46,10 @@
     & .product__price--percent {
       background-color: var(--clr-orange-100);
       border-radius: rem(6px);
-      padding: rem(2px) rem(8px);
+      padding: rem(1px) rem(8px);
 
       & span {
+        font-size: rem(15px);
         font-weight: $font-weight-bold;
         color: var(--clr-orange-200);
       }
@@ -45,19 +57,21 @@
   }
 
   & .product__price--full {
-    font-size: rem(17px);
+    font-size: rem(16px);
     font-weight: $font-weight-bold;
     color: var(--clr-light-300);
     text-decoration: line-through;
 
     margin-block-end: rem(24px);
+
+    @include mq(large) {
+      margin-block-end: rem(28px);
+    }
   }
 
   & .product__price,
   & .product__counter {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include x-flex-flex-between;
   }
 
   & .product__counter {
@@ -71,30 +85,6 @@
     &--count {
       font-weight: $font-weight-bold;
       color: var(--clr-dark-300);
-    }
-  }
-
-  & .product--btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: size(4);
-
-    width: 100%;
-
-    font-size: rem(16px);
-    font-weight: $font-weight-bold;
-    color: var(--clr-light-100);
-
-    background-color: var(--clr-orange-200);
-    border-radius: rem(10px);
-
-    padding: rem(18px) rem(16px);
-
-    transition: background-color 200ms ease-in-out;
-
-    &:is(:hover, :focus-visible) {
-      background-color: var(--clr-orange-100);
     }
   }
 }
@@ -119,8 +109,7 @@
     }
 
     & .product__flex {
-      display: flex;
-      align-items: center;
+      @include x-flex-align;
       gap: size(4);
     }
 

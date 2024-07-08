@@ -13,8 +13,7 @@
 }
 
 .mobile-carousel--img {
-  display: flex;
-  align-items: center;
+  @include x-flex-align;
 
   height: auto;
   width: 100%;
@@ -37,38 +36,9 @@
 
   width: 100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include x-flex-between;
 
   padding-inline: rem(16px);
-
-  & .mobile-carousel--btn {
-    display: grid;
-    place-items: center;
-
-    width: rem(38px);
-    height: rem(38px);
-
-    background-color: var(--clr-light-100);
-    border-radius: $full-radius;
-
-    & svg path {
-      transition: stroke 200ms ease-in-out;
-    }
-
-    &:hover svg path {
-      stroke: var(--clr-orange-200);
-    }
-
-    &:nth-child(1) svg {
-      margin-inline-end: rem(3.5px);
-    }
-
-    &:nth-child(2) svg {
-      margin-inline-start: rem(3.5px);
-    }
-  }
 }
 
 .lightbox {
@@ -77,15 +47,13 @@
 
 @include mq(large) {
   .main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include x-flex-between;
     flex-direction: row;
 
     padding-block-start: min(7vh, size(11));
 
     &.container {
-      --max-width: #{rem(1090px)}; //#{$container-max-width};
+      --max-width: #{rem(1090px)};
     }
   }
 
@@ -107,9 +75,7 @@
     }
 
     &__img-indicators {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include x-flex-between;
       gap: size(4);
 
       & button {

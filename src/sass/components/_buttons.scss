@@ -1,0 +1,126 @@
+@use "../abstracts/" as *;
+
+.navigation--hamburger-btn {
+  @include x-grid-center;
+}
+
+.navigation__cart--btn {
+  color: var(--clr-light-400);
+
+  padding: rem(5px);
+  transition: color 150ms ease-in-out;
+
+  &:is(:hover, :focus-visible) {
+    color: var(--clr-dark-300);
+  }
+}
+
+.mobile-navbar--close-btn {
+  margin-block-end: rem(28px);
+
+  & button svg path {
+    transition: fill 150ms ease-in-out;
+  }
+
+  & button:is(:hover, :focus-visible) svg path {
+    fill: var(--clr-orange-200);
+  }
+}
+
+.cart--btn {
+  width: 100%;
+
+  font-size: rem(16px);
+  font-weight: $font-weight-bold;
+  color: var(--clr-light-100);
+  letter-spacing: rem(1px);
+
+  background-color: var(--clr-orange-200);
+  border-radius: rem(10px);
+
+  padding: rem(18px) rem(20px);
+
+  transition: background-color 200ms ease-in-out;
+}
+
+.mobile-carousel--btn {
+  --mobile-carousel-btn-size: #{rem(38px)};
+
+  @include x-grid-center;
+
+  width: var(--mobile-carousel-btn-size);
+  height: var(--mobile-carousel-btn-size);
+
+  background-color: var(--clr-light-100);
+  border-radius: $full-radius;
+
+  & svg path {
+    transition: stroke 200ms ease-in-out;
+  }
+
+  &:is(:hover, :focus-visible) svg path {
+    stroke: var(--clr-orange-200);
+  }
+
+  &:nth-child(1) svg {
+    margin-inline-end: rem(3.5px);
+  }
+
+  &:nth-child(2) svg {
+    margin-inline-start: rem(3.5px);
+  }
+}
+
+.lightbox-modal--btn {
+  --lightbox-modal-btn-size: #{rem(50px)};
+
+  width: var(--lightbox-modal-btn-size);
+  height: var(--lightbox-modal-btn-size);
+
+  @include x-grid-center;
+
+  border-radius: $full-radius;
+  background-color: var(--clr-light-100);
+
+  & svg path {
+    transition: stroke 200ms ease-in-out;
+  }
+
+  &:is(:hover, :focus-visible) svg path {
+    stroke: var(--clr-orange-200);
+  }
+
+  &:nth-child(1) svg {
+    margin-inline-end: rem(3.5px);
+  }
+
+  &:nth-child(2) svg {
+    margin-inline-start: rem(3.5px);
+  }
+}
+
+.product--btn {
+  --product-btn-background-shadow: hsla(26, 100%, 55%, 0.25);
+  --product-btn-background-color-hover: hsla(26, 100%, 55%, 0.7);
+
+  @include x-flex-center;
+  gap: size(4);
+
+  width: 100%;
+
+  font-size: rem(16px);
+  font-weight: $font-weight-bold;
+  color: var(--clr-light-100);
+
+  border-radius: rem(10px);
+  background-color: var(--clr-orange-200);
+  box-shadow: 0 size(4) size(5) var(--product-btn-background-shadow);
+
+  padding: rem(18px) rem(16px);
+
+  transition: background-color 200ms ease-in-out;
+
+  &:is(:hover, :focus-visible) {
+    background-color: var(--product-btn-background-color-hover);
+  }
+}

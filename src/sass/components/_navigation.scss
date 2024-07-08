@@ -3,29 +3,27 @@
 .navigation {
   position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include x-flex-between;
   gap: size(4);
 
-  padding-block: rem(20px);
+  padding-block: rem(15px);
 
   &.container {
     --max-width: #{rem(650px)};
   }
 
   @include mq(large) {
-    border-bottom: rem(1px) solid var(--clr-light-300);
+    border-bottom: rem(1px) solid var(--clr-light-200);
+
+    padding-block: rem(26px);
   }
 }
 
 .navigation__left {
-  display: flex;
-  align-items: center;
+  @include x-flex-align;
 
   & div:nth-child(1) {
-    display: flex;
-    align-items: center;
+    @include x-flex-align;
     gap: size(4);
   }
 
@@ -34,73 +32,48 @@
   }
 }
 
-.navigation--hamburger-btn {
-  display: grid;
-  place-content: center;
-  gap: rem(4px);
-
-  & span {
-    display: inline-block;
-
-    width: rem(30px);
-    height: rem(5px);
-
-    background-color: var(--clr-dark-200);
-    border-radius: $full-radius;
-  }
-}
-
 .navigation__right {
   position: relative;
 
-  display: flex;
-  align-items: center;
-  gap: size(2);
+  @include x-flex-align;
+  gap: size(3);
 
-  // &__cart {
-  //   position: relative;
-  // }
+  @include mq(large) {
+    gap: size(8);
+  }
 
-  .navigation__cart--btn {
-    color: var(--clr-light-400);
+  & .navigation__cart--counter {
+    position: absolute;
+    left: rem(15px);
+    top: rem(-3px);
 
-    padding: rem(5px);
-    transition: color 150ms ease-in-out;
+    @include x-grid-center;
 
-    &:is(:hover, :focus-visible) {
-      color: var(--clr-dark-300);
-    }
+    width: fit-content;
 
-    & .navigation__cart--counter {
-      position: absolute;
-      left: rem(14px);
-      top: 0;
+    font-size: rem(8px);
+    font-weight: $font-weight-bold;
+    color: var(--clr-light-100);
 
-      display: grid;
-      place-items: center;
+    background-color: var(--clr-orange-200);
+    border-radius: $full-radius;
 
-      width: fit-content;
+    padding: rem(3px) rem(8px);
 
-      font-size: rem(8px);
-      font-weight: $font-weight-bold;
-      color: var(--clr-light-100);
-
-      background-color: var(--clr-orange-200);
-      border-radius: $full-radius;
-
-      padding: rem(2px) rem(7px);
+    @include mq(large) {
+      top: rem(4px);
     }
   }
 
   &__avatar {
-    --avatar-size: #{rem(55px)};
+    --avatar-size: #{rem(33px)};
     --avatar-border-color: transparent;
 
     width: var(--avatar-size);
     height: var(--avatar-size);
 
     border-radius: $border-radius-full;
-    border: 2px solid var(--avatar-border-color);
+    border: rem(2px) solid var(--avatar-border-color);
 
     transition: border 250ms ease-in-out;
 
@@ -116,6 +89,10 @@
 
       object-fit: contain;
       aspect-ratio: 1 / 1;
+    }
+
+    @include mq(large) {
+      --avatar-size: #{rem(48px)};
     }
   }
 }
@@ -133,8 +110,7 @@
     }
 
     & .navigation__list {
-      display: flex;
-      align-items: center;
+      @include x-flex-align;
       gap: size(6);
     }
   }
