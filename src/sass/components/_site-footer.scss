@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+.attribution {
+  text-align: center;
+  margin-block: min(6%, rem(80px));
+
+  & p {
+    font-size: rem(14px);
+    color: var(--clr-light-400);
+  }
+
+  & a {
+    font-size: rem(16px);
+    font-weight: $font-weight-bold;
+    color: var(--clr-orange-200);
+
+    transition: all 200ms ease-in-out;
+
+    &:is(:hover, :focus-visible) {
+      text-decoration: underline;
+    }
+  }
+
+  @include mq(large) {
+    @include x-flex-center;
+    gap: size(3);
+  }
+}
