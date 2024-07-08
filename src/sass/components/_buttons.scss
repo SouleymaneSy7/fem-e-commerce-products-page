@@ -100,7 +100,7 @@
 }
 
 .product--btn {
-  --product-btn-background-shadow: hsla(26, 100%, 55%, 0.25);
+  --product-btn-background-shadow: $product-btn-shadow-clr;
   --product-btn-background-color-hover: hsla(26, 100%, 55%, 0.7);
 
   @include x-flex-center;
