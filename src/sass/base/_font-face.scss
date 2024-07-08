@@ -1,11 +1,25 @@
 @use "../abstracts/" as *;
 
-// default @font-face
-@include custom-font-face(
-  "Kumbh Sans",
-  "@/assets/fonts/KumbhSans-Regular",
-  normal
-);
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Kumbh Sans"), local("Kumbh Sans Regular"),
+    url("../../assets/fonts/KumbhSans-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/KumbhSans-Regular.woff") format("woff"),
+    url("../../assets/fonts/KumbhSans-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/KumbhSans-Regular.eot");
+}
 
-// bold @font-face
-@include custom-font-face("Kumbh Sans", "@/assets/fonts/KumbhSans-Bold", bold);
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local("Kumbh Sans"), local("Kumbh Sans Bold"),
+    url("../../assets/fonts/KumbhSans-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/KumbhSans-Bold.woff") format("woff"),
+    url("../../assets/fonts/KumbhSans-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/KumbhSans-Bold.eot");
+}

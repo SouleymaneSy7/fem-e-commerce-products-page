@@ -1,26 +1,9 @@
 @use "sass:meta";
 @use "sass:math";
 @use "sass:map";
-@use "sass:string";
 @use "./breakpoints" as *;
 
-// =============================
-//        Font Face Mixins
-// =============================
 
-@mixin custom-font-face($font-name, $file-name, $weight) {
-  @font-face {
-    font-family: string.quote($font-name);
-    font-style: normal;
-    font-display: swap;
-    font-weight: $weight;
-    src: url($file-name + ".eot");
-    src: local($font-name), url($file-name + ".woff2") format("woff2"),
-      url($file-name + ".woff") format("woff"),
-      url($file-name + ".ttf") format("truetype"),
-      url($file-name + ".eot?#iefix") format("embedded-opentype");
-  }
-}
 
 // ================================
 //      Media Queries Mixins
