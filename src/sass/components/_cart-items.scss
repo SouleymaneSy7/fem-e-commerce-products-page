@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .cart {
-  --cart-background-shadow: $cart-bg-shadow-clr;
+  --cart-background-shadow: #{$cart-bg-shadow-clr};
   --cart-top: #{rem(70px)};
   --cart-left: 50%;
 

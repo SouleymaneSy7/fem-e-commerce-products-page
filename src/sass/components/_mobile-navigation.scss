@@ -9,15 +9,9 @@
   width: var(--mobile-navbar-full-size);
   height: var(--mobile-navbar-full-size);
 
-  transform: translateX(-100%);
-
   background-color: var(--clr-dark-100);
 
   overflow: hidden;
-
-  &.active {
-    transform: translateX(0%);
-  }
 
   @include mq(large) {
     display: none;
