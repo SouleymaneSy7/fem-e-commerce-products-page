@@ -30,11 +30,12 @@ const HeaderNavBar = () => {
             <Button
               className="navigation--hamburger-btn"
               onClick={handleNavbarOpen}
+              title="Hamburger Menu"
             >
               <HamburgerMenuIcon />
             </Button>
 
-            <a href="#" className="navigation__logo">
+            <a href="#" className="navigation__logo" title="Website Logo">
               <LogoIcon />
             </a>
           </div>
@@ -46,7 +47,11 @@ const HeaderNavBar = () => {
 
         <div className="navigation__right">
           <div className="navigation__right__cart">
-            <Button className="navigation__cart--btn" onClick={handleCartOpen}>
+            <Button
+              className="navigation__cart--btn"
+              onClick={handleCartOpen}
+              title="Product Cart Items"
+            >
               <CartIcon />
               {productCounter === 0 ? (
                 ""
@@ -58,8 +63,8 @@ const HeaderNavBar = () => {
             </Button>
           </div>
 
-          <Button className="navigation__right__avatar">
-            <img src={avatarImg} />
+          <Button className="navigation__right__avatar" title="User Profile">
+            <img src={avatarImg} alt="profile picture of the head of a men" />
           </Button>
         </div>
 

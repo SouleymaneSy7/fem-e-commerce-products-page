@@ -39,11 +39,19 @@ const MobileCarouselSlider = ({
       </div>
 
       <div className="mobile-carousel__btn-container">
-        <Button className="mobile-carousel--btn" onClick={prevSlide}>
+        <Button
+          className="mobile-carousel--btn"
+          onClick={prevSlide}
+          title="Left Arrow"
+        >
           <PreviousIcon />
         </Button>
 
-        <Button className="mobile-carousel--btn" onClick={nextSlide}>
+        <Button
+          className="mobile-carousel--btn"
+          onClick={nextSlide}
+          title="Right Arrow"
+        >
           <NextIcon />
         </Button>
       </div>

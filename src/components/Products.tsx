@@ -20,8 +20,8 @@ const Products = () => {
 
   return (
     <section className="products">
-      <h2 className="product__sub-title">{subTitle}</h2>
-      <h1 className="product__title">{title}</h1>
+      <h1 className="product__sub-title">{subTitle}</h1>
+      <h2 className="product__title">{title}</h2>
       <p className="product__description">{description}</p>
       <div className="product__price">
         <div>
@@ -39,6 +39,7 @@ const Products = () => {
           <Button
             className="product__counter--minus"
             onClick={decreaseProductCounter}
+            title="Decrease the product item"
           >
             <MinusIcon />
           </Button>
@@ -48,6 +49,7 @@ const Products = () => {
           <Button
             className="product__counter--plus"
             onClick={increaseProductCounter}
+            title="Increase the product item"
           >
             <PlusIcon />
           </Button>
