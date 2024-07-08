@@ -1,7 +1,6 @@
 @use "sass:meta";
 @use "sass:math";
 @use "sass:map";
-// @use "./sizes" as *;
 @use "./breakpoints" as *;
 
 // =============================
@@ -60,16 +59,16 @@
   align-items: center;
 }
 
-@mixin x-flex-flex-start {
+@mixin x-flex-center {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin x-flex-column-flex-start {
+@mixin x-flex-flex-between {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 @mixin x-flex-align {
