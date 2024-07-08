@@ -3,13 +3,9 @@
 // default @font-face
 @include custom-font-face(
   "Kumbh Sans",
-  "@/assets/fonts/kumbh-sans-regular",
-  400
+  "@/assets/fonts/KumbhSans-Regular",
+  normal
 );
 
 // bold @font-face
-@include custom-font-face(
-  "Kumbh Sans",
-  "@/assets/fonts/kumbh-sans-bold",
-  700
-);
+@include custom-font-face("Kumbh Sans", "@/assets/fonts/KumbhSans-Bold", bold);
