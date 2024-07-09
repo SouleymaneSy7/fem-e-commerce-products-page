@@ -8,8 +8,8 @@
   src: local("Kumbh Sans"), local("Kumbh Sans Regular"),
     url("../../assets/fonts/KumbhSans-Regular.woff2") format("woff2"),
     url("../../assets/fonts/KumbhSans-Regular.woff") format("woff"),
-    url("../../assets/fonts/KumbhSans-Regular.ttf") format("truetype");
-  src: url("../../assets/fonts/KumbhSans-Regular.eot");
+    url("../../assets/fonts/KumbhSans-Regular.ttf") format("truetype")
+      url("../../assets/fonts/KumbhSans-Regular.eot");
 }
 
 @font-face {
@@ -20,6 +20,6 @@
   src: local("Kumbh Sans"), local("Kumbh Sans Bold"),
     url("../../assets/fonts/KumbhSans-Bold.woff2") format("woff2"),
     url("../../assets/fonts/KumbhSans-Bold.woff") format("woff"),
-    url("../../assets/fonts/KumbhSans-Bold.ttf") format("truetype");
-  src: url("../../assets/fonts/KumbhSans-Bold.eot");
+    url("../../assets/fonts/KumbhSans-Bold.ttf") format("truetype")
+      url("../../assets/fonts/KumbhSans-Bold.eot");
 }
